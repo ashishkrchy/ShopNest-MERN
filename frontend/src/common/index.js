@@ -1,4 +1,4 @@
-const backend_domain = 'http://localhost:3000';
+const backend_domain = import.meta.env.VITE_BACKEND_URL;
 
 const SummaryApi = {
   signUP: {

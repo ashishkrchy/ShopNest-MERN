@@ -65,7 +65,7 @@ const RazorpayButton = ({
       const order = await response.json();
 
       const options = {
-        key: import.meta.env.RAZORPAY_KEY_ID,
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID,
         amount: order.order.amount,
         currency: order.order.currency,
         name: 'ShopNest',
