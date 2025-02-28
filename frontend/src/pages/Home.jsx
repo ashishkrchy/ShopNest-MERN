@@ -2,7 +2,7 @@
 import React from 'react';
 import CategoryList from '../components/CategoryList';
 import Banner from '../components/BannerProduct';
-import HorizontalCardProduct from '../components/HoriZontalCardProduct';
+import HorizontalCardProduct from '../components/HorizontalCardProduct';
 import productCategory from '../helpers/productCategory.js';
 import VerticalCardProduct from '../components/VerticalCardProduct.jsx';
 
