@@ -4,14 +4,14 @@ const {
   userLoginController,
   logoutController,
 } = require('../controllers/authController');
-const validateSignup = require('../middleware/validateSignup');
+const validateSignUp = require('../middleware/validateSignUp');
 const validateLogin = require('../middleware/validateLogin');
 
 const authToken = require('../middleware/authToken');
 
 const router = express.Router();
 
-router.post('/signup', validateSignup, userSignUpController);
+router.post('/signup', validateSignUp, userSignUpController);
 router.post('/login', validateLogin, userLoginController);
 router.get('/logout', authToken, logoutController);
 
