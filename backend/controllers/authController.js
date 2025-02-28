@@ -78,7 +78,7 @@ async function userLoginController(req, res) {
       });
     }
 
-    if (!process.env.JWT_SECRET) {
+    if (!process.env.JWT_SECRET_KEY) {
       console.error('JWT_SECRET is missing in environment variables');
       return res.status(500).json({
         message: 'Server misconfiguration',
@@ -87,7 +87,7 @@ async function userLoginController(req, res) {
     }
 
     const tokenData = { id: user._id, email: user.email, role: user.role };
-    const token = jwt.sign(tokenData, process.env.JWT_SECRET, {
+    const token = jwt.sign(tokenData, process.env.JWT_SECRET_KEY, {
       expiresIn: '24h',
     });
 
