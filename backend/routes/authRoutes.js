@@ -13,6 +13,6 @@ const router = express.Router();
 
 router.post('/signup', validateSignUp, userSignUpController);
 router.post('/login', validateLogin, userLoginController);
-router.get('/logout', authToken, logoutController);
+router.post('/logout', authToken, logoutController);
 
 module.exports = router;

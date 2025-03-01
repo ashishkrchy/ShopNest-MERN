@@ -19,7 +19,7 @@ const SummaryApi = {
   },
   logout: {
     url: `${backend_domain}/api/auth/logout`,
-    method: 'get',
+    method: 'post',
   },
   allUser: {
     url: `${backend_domain}/api/admin-users`,

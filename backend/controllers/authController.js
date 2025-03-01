@@ -118,10 +118,11 @@ async function userLoginController(req, res) {
 const logoutController = async (req, res) => {
   try {
     res.clearCookie('token', {
-      path: '/', 
+      path: '/',
       httpOnly: true,
       secure: true,
       sameSite: 'None',
+      domain: '.shop-nest-mern-ff35.vercel.app', 
     });
 
     res.cookie('token', '', {
@@ -129,7 +130,8 @@ const logoutController = async (req, res) => {
       httpOnly: true,
       secure: true,
       sameSite: 'None',
-      expires: new Date(0), // Expire immediately
+      domain: '.shop-nest-mern-ff35.vercel.app',
+      expires: new Date(0),
     });
 
     res.status(200).json({
