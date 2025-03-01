@@ -16,10 +16,12 @@ const authTokenMiddleware = (req, res, next) => {
 
     next();
   } catch (err) {
-
     let message = 'Invalid token. Authentication failed.';
 
     if (err.name === 'TokenExpiredError') {
+      if (req.path === '/logout') {
+        return next();
+      }
       message = 'Session expired. Please log in again.';
     } else if (err.name === 'JsonWebTokenError') {
       message = 'Invalid token. Please provide a valid token.';

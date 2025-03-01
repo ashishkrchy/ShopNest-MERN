@@ -34,7 +34,6 @@ function App() {
       }
     } catch (error) {
       console.error('Error fetching user details:', error);
-      
     }
   };
 
@@ -60,11 +59,6 @@ function App() {
   };
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      dispatch(setUserDetails(JSON.parse(storedUser)));
-      setCartCount(Number(cartCount));
-    }
     fetchUserDetails();
     fetchUserAddToCartProductCount();
   }, []);

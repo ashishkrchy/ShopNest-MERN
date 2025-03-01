@@ -167,7 +167,10 @@ const Profile = () => {
     setLoading(true);
     try {
       const response = await fetch(SummaryApi.logout.url, {
-        method: SummaryApi.logout.method,
+        method: SummaryApi.logout.method, //post
+        headers: {
+          'Content-Type': 'application/json',
+        },
         credentials: 'include',
       });
 
