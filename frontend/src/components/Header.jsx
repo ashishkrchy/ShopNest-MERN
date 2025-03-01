@@ -144,12 +144,6 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  useEffect(() => {
-    if (!user && !loading) {
-      fetchUserDetails();
-    }
-  }, [fetchUserDetails, user, loading]);
-
   return (
     <header
       className="h-16 bg-black fixed w-full z-40"
