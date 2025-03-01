@@ -29,15 +29,12 @@ function App() {
 
       if (dataAPI.success) {
         dispatch(setUserDetails(dataAPI.data));
-
-        // Store user in localStorage to persist state on refresh
-        localStorage.setItem('user', JSON.stringify(dataAPI.data));
       } else {
-        localStorage.removeItem('user'); 
+        localStorage.removeItem('user');
       }
     } catch (error) {
       console.error('Error fetching user details:', error);
-      localStorage.removeItem('user');
+      
     }
   };
 
