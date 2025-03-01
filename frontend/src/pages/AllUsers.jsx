@@ -56,74 +56,77 @@ const AllUsers = () => {
   }
 
   return (
-    <div className="bg-gray-100 pb-6 pt-4 max-h-[calc(100vh-100px)] overflow-y-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-100 pb-6 pt-4 h-[calc(100vh-100px)] overflow-y-auto w-full relative">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         <h2 className="text-2xl font-semibold mb-6 text-gray-800">All Users</h2>
         <div className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="bg-black text-gray-200">
-                <th className="border-b border-gray-200 px-2 sm:px-4 py-3 text-center text-sm sm:text-base font-medium">
-                  Sr.
-                </th>
-                <th className="border-b border-gray-200 px-2 sm:px-4 py-3 text-center text-sm sm:text-base font-medium">
-                  Name
-                </th>
-                <th className="border-b border-gray-200 px-2 sm:px-4 py-3 text-center text-sm sm:text-base font-medium">
-                  Email
-                </th>
-                <th className="border-b border-gray-200 px-2 sm:px-4 py-3 text-center text-sm sm:text-base font-medium">
-                  Role
-                </th>
-                <th className="border-b border-gray-200 px-2 sm:px-4 py-3 text-center text-sm sm:text-base font-medium">
-                  Created At
-                </th>
-                <th className="border-b border-gray-200 px-2 sm:px-4 py-3 text-center text-sm sm:text-base font-medium">
-                  Action
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {allUser.length > 0 ? (
-                allUser.map((user, index) => (
-                  <tr
-                    key={user._id}
-                    className="hover:bg-gray-100 transition-colors duration-200"
-                  >
-                    <td className="border-b border-gray-200 px-2 sm:px-4 py-3 text-sm text-gray-600 text-center">
-                      {index + 1}
-                    </td>
-                    <td className="border-b border-gray-200 px-2 sm:px-4 py-3 text-sm text-gray-600 text-center">
-                      {user.name || 'N/A'}
-                    </td>
-                    <td className="border-b border-gray-200 px-2 sm:px-4 py-3 text-sm text-gray-600 text-center">
-                      {user.email || 'N/A'}
-                    </td>
-                    <td className="border-b border-gray-200 px-2 sm:px-4 py-3 text-sm text-gray-600 text-center">
-                      {user.role || 'User'}
-                    </td>
-                    <td className="border-b border-gray-200 px-2 sm:px-4 py-3 text-sm text-gray-600 text-center">
-                      {moment(user.createdAt).format('LL')}
-                    </td>
-                    <td className="border-b border-gray-200 px-2 sm:px-4 py-3 text-sm text-gray-200 text-center">
-                      <button
-                        className="bg-gray-600 p-2 rounded-full cursor-pointer hover:bg-gray-700 hover:text-white transition-colors duration-200"
-                        onClick={() => setSelectedUser(user)}
-                      >
-                        <MdEdit size={18} />
-                      </button>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse min-w-[300px]">
+              <thead>
+                <tr className="bg-gray-200 text-gray-800">
+                  <th className="border-b border-gray-200 px-2 py-3 text-center text-sm font-medium">
+                    Sr.
+                  </th>
+                  <th className="border-b border-gray-200 px-2 py-3 text-center text-sm font-medium">
+                    Name
+                  </th>
+                  <th className="border-b border-gray-200 px-2 py-3 text-center text-sm font-medium">
+                    Email
+                  </th>
+                  <th className="border-b border-gray-200 px-2 py-3 text-center text-sm font-medium">
+                    Role
+                  </th>
+                  <th className="border-b border-gray-200 px-2 py-3 text-center text-sm font-medium">
+                    Created At
+                  </th>
+                  <th className="border-b border-gray-200 px-2 py-3 text-center text-sm font-medium">
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {allUser.length > 0 ? (
+                  allUser.map((user, index) => (
+                    <tr
+                      key={user._id}
+                      className="hover:bg-gray-100 transition-colors duration-200"
+                    >
+                      <td className="border-b border-gray-200 px-2 py-3 text-sm text-gray-600 text-center">
+                        {index + 1}
+                      </td>
+                      <td className="border-b border-gray-200 px-2 py-3 text-sm text-gray-600 text-center">
+                        {user.name || 'N/A'}
+                      </td>
+                      <td className="border-b border-gray-200 px-2 py-3 text-sm text-gray-600 text-center">
+                        {user.email || 'N/A'}
+                      </td>
+                      <td className="border-b border-gray-200 px-2 py-3 text-sm text-gray-600 text-center">
+                        {user.role || 'User'}
+                      </td>
+                      <td className="border-b border-gray-200 px-2 py-3 text-sm text-gray-600 text-center">
+                        {moment(user.createdAt).format('LL')}
+                      </td>
+                      <td className="border-b border-gray-200 px-2 py-3 text-sm text-gray-600 text-center">
+                        <button
+                          className="bg-gray-200 p-2 rounded-full cursor-pointer hover:bg-gray-300 hover:text-white transition-colors duration-200"
+                          onClick={() => setSelectedUser(user)}
+                          aria-label={`Edit role for ${user.name || 'user'}`}
+                        >
+                          <MdEdit size={18} />
+                        </button>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="6" className="text-center py-6 text-gray-500">
+                      No users found
                     </td>
                   </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="6" className="text-center py-6 text-gray-500">
-                    No users found
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* Show ChangeUserRole modal only if a user is selected */}
