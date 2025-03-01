@@ -56,7 +56,7 @@ const AllUsers = () => {
   }
 
   return (
-    <div className="bg-gray-100 pb-6 pt-4">
+    <div className="bg-gray-100 pb-6 pt-4 max-h-[calc(100vh-100px)] overflow-y-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-semibold mb-6 text-gray-800">All Users</h2>
         <div className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">

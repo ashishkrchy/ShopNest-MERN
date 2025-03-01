@@ -41,7 +41,7 @@ const AdminAnalytics = () => {
   if (error) return <div className="text-center text-red-500">{error}</div>;
 
   return (
-    <div className="p-6 bg-gray-100 rounded">
+    <div className="p-6 bg-gray-100 rounded max-h-[calc(100vh-100px)] overflow-y-auto">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">
         📊 Admin Analytics
       </h2>
