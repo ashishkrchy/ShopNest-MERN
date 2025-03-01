@@ -117,11 +117,10 @@ async function userLoginController(req, res) {
 
 const logoutController = async (req, res) => {
   try {
-    res.cookie('token', '', {
+    res.clearCookie('token', {
       httpOnly: true,
       secure: true,
-      sameSite: 'none',
-      maxAge: 0,
+      sameSite: 'None',
     });
 
     res.status(200).json({

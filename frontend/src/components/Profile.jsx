@@ -175,12 +175,15 @@ const Profile = () => {
       if (data.success) {
         toast.success('Logged out successfully', {
           position: 'top-center',
-          autoClose: 3000,
+          autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
         });
+        localStorage.removeItem('token');
+        sessionStorage.removeItem('token');
+
         dispatch(setUserDetails(null));
         navigate('/');
       } else {

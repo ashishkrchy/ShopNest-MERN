@@ -39,6 +39,8 @@ const AdminPanel = () => {
           draggable: true,
           theme: 'light',
         });
+        localStorage.removeItem('token');
+        sessionStorage.removeItem('token');
         dispatch(setUserDetails(null));
         navigate('/');
       } else {
