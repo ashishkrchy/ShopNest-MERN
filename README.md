@@ -1,10 +1,10 @@
-****************************************   ShopNest - E-Commerce Platform    *************************************************
+****************************************************   ShopNest - E-Commerce Platform    **************************************************************************************
   Welcome to ShopNest – a full-stack e-commerce platform designed for seamless online shopping experiences. Built
   with the MERN stack, ShopNest provides a robust, scalable solution for managing products, orders, and users,
   offering a modern and user-friendly interface.
 
 🌟 Overview
------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ShopNest is an e-commerce application that empowers users to browse, purchase, and track products effortlessly,
 while admins can manage users, products, orders, and analytics. With secure authentication, Razorpay payment
@@ -13,7 +13,7 @@ for both users and administrators.
 
 
 ✨ Features
-------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   User Features:
   
@@ -46,7 +46,7 @@ for both users and administrators.
       🎨 Light, modern UI with Tailwind CSS, optimized for performance.
 
 🛠️ Tech Stack
----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
        Category                                  Technologies
     ---------------                            -----------------               
@@ -65,7 +65,7 @@ for both users and administrators.
       
 
   🔧 Installation & Setup
--------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Follow these steps to set up and run ShopNest locally:
 
@@ -136,14 +136,14 @@ Follow these steps to set up and run ShopNest locally:
           npm run dev
 
 🔐 Authentication & Authorization
--------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     👥 General Users can browse products, add to cart, manage wishlists, and place orders.
     
     🛠️ Admin Users have exclusive access to manage users, products, orders, and view analytics via the admin panel.
 
 🌐 Deployment
----------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Both the frontend and backend are deployed on Vercel for production use:
     
@@ -159,7 +159,7 @@ Follow these steps to set up and run ShopNest locally:
     settings instead of committing .env files).
 
 📂 Folder Structure
---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         shopnest/
         ├── frontend/                # Frontend (React)
