@@ -1,10 +1,10 @@
-****************************************************   ShopNest - E-Commerce Platform    ******************************************************************
+****************************************************   ShopNest - E-Commerce Platform    **************************************************
   Welcome to ShopNest – a full-stack e-commerce platform designed for seamless online shopping experiences. Built
   with the MERN stack, ShopNest provides a robust, scalable solution for managing products, orders, and users,
   offering a modern and user-friendly interface.
 
 🌟 Overview
------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
 
 ShopNest is an e-commerce application that empowers users to browse, purchase, and track products effortlessly,
 while admins can manage users, products, orders, and analytics. With secure authentication, Razorpay payment
@@ -13,7 +13,7 @@ for both users and administrators.
 
 
 ✨ Features
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------
 
   User Features:
   
