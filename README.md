@@ -1,4 +1,4 @@
-****************************************************   ShopNest - E-Commerce Platform    **************************************************
+****************************************************   ShopNest - E-Commerce Platform    *****************************************************
   Welcome to ShopNest – a full-stack e-commerce platform designed for seamless online shopping experiences. Built
   with the MERN stack, ShopNest provides a robust, scalable solution for managing products, orders, and users,
   offering a modern and user-friendly interface.
