@@ -1,55 +1,51 @@
-************************   ShopNest - E-Commerce Platform    *************************************************
-  Welcome to ShopNest – a full-stack e-commerce platform designed for seamless online shopping experiences. Built
-  with the MERN stack, ShopNest provides a robust, scalable solution for managing products, orders, and users,
-  offering a modern and user-friendly interface.
+**********\*\*\*\*********** ShopNest - E-Commerce Platform ************************\*************************
+Welcome to ShopNest – a full-stack e-commerce platform designed for seamless online shopping experiences. Built
+with the MERN stack, ShopNest provides a robust, scalable solution for managing products, orders, and users,
+offering a modern and user-friendly interface.
 
-🌟 Overview
----------------------------------------------------------------------------------------------------------------
+## 🌟 Overview
 
 ShopNest is an e-commerce application that empowers users to browse, purchase, and track products effortlessly,
 while admins can manage users, products, orders, and analytics. With secure authentication, Razorpay payment
 integration, and Cloudinary for optimized images, ShopNest delivers a high-performance shopping experience
 for both users and administrators.
 
+## ✨ Features
 
-✨ Features
----------------------------------------------------------------------------------------------------------------
+User Features:
 
-  User Features:
-  
       ✅ User registration, login, and profile management with JWT authentication.
-      
+
       🔍 Product browsing by category, search, and filters (price, brand, sort).
-      
+
       🛒 Shopping cart, wishlist, and order tracking.
-      
+
       💳 Secure Razorpay payment integration for checkout.
-      
+
       📱 Responsive design for mobile, tablet, and desktop views.
 
-  Admin Features:
-  
+Admin Features:
+
       🔐 Role-based access control for admin users.
-      
+
       ⚙️ Manage users, products, and orders via an admin panel.
-      
+
       📊 Analytics dashboard for tracking sales and performance.
 
-  Technical Highlights:
+Technical Highlights:
 
       📷 Optimized image storage using Cloudinary for fast product rendering.
-      
+
       🔄 Debouncing for search functionality to reduce API calls and improve efficiency.
-      
+
       🔍 Zooming effect on product hover for an interactive shopping experience.
-      
+
       🎨 Light, modern UI with Tailwind CSS, optimized for performance.
 
-🛠️ Tech Stack
----------------------------------------------------------------------------------------------------
+## 🛠️ Tech Stack
 
        Category                                  Technologies
-    ---------------                            -----------------               
+    ---------------                            -----------------
 
       Frontend                    React.js, Tailwind CSS, Redux Toolkit, React Router
 
@@ -62,104 +58,99 @@ for both users and administrators.
     Image Management                                 Cloudinary
 
       Deployment                             Vercel (Frontend & Backend)
-      
 
-  🔧 Installation & Setup
-------------------------------------------------------------------------------------------------------------------------------
+
+## 🔧 Installation & Setup
 
 Follow these steps to set up and run ShopNest locally:
 
-  ****************  Prerequisites  *****************
-  
+******\*\*\*\******* Prerequisites ********\*********
+
       ✅ Node.js (v14.x or higher)
-      
+
       ✅ npm or yarn
-      
+
       ✅ MongoDB (local or cloud instance, e.g., MongoDB Atlas)
-      
+
       ✅ Razorpay Account (for payment integration)
-      
+
       ✅ Cloudinary Account (for image storage)
 
+********\********* Clone the Repository ******\*\*******
 
- *****************  Clone the Repository   **************
- 
         git clone https://github.com/ashishkrchy/shopnest-backend.git
 
-  *****************  Backend Setup  *********************
+********\********* Backend Setup **********\***********
 
           cd backend
-      
+
       Install Dependencies
-      
+
           npm install
-      
+
       Configure Environment Variables
-      
+
           Create a .env file in the root directory and add:
-          
+
           MONGO_URI=your_mongodb_connection_string
           JWT_SECRET_KEY=your_jwt_secret_key
           PORT=3000
           FRONTEND_URL=http://localhost:5173
           RAZORPAY_KEY_ID=your_razorpay_key_id
           RAZORPAY_KEY_SECRET=your_razorpay_key_secret
-      
+
           Replace the placeholders with your actual credentials. Ensure these values are not
           committed to version control; add .env to .gitignore.
-      
+
       Start the Backend Server
-      
+
           npm run dev
 
-  ********************  Frontend Setup  *********************************
-      
+********\*\*\*\********* Frontend Setup ****************\*****************
+
         cd frontend
-      
+
       Install Dependencies
-        
+
         npm install
-      
+
       Configure Environment Variables
-      
+
         Create a .env file in the root directory and add:
-        
+
         VITE_CLOUD_NAME_CLOUDINARY=your_cloudinary_cloud_name
         VITE_BACKEND_URL=http://localhost:3000
         VITE_RAZORPAY_KEY_ID=your_razorpay_key_id
-        
+
         Replace the placeholders with your actual credentials. Ensure these values are not committed to
         version control.
-      
+
       Start the Frontend Server
-      
+
           npm run dev
 
-🔐 Authentication & Authorization
--------------------------------------------------------------------------------------------------------------------
+## 🔐 Authentication & Authorization
 
     👥 General Users can browse products, add to cart, manage wishlists, and place orders.
-    
+
     🛠️ Admin Users have exclusive access to manage users, products, orders, and view analytics via the admin panel.
 
-🌐 Deployment
----------------------------------------------------------------------------------------------------------------------
+## 🌐 Deployment
 
     Both the frontend and backend are deployed on Vercel for production use:
-    
+
     Frontend Deployment:
-    
+
         vercel --prod
-    
+
     Backend Deployment:
-    
+
         vercel --prod
-    
+
     Ensure environment variables are configured in Vercel for production deployment (use Vercel’s environment variable
     settings instead of committing .env files).
 
-📂 Folder Structure
---------------------------------------------------------------------------------------------------------------------------
+## 📂 Folder Structure
 
         shopnest/
         ├── frontend/                # Frontend (React)
@@ -183,16 +174,14 @@ Follow these steps to set up and run ShopNest locally:
         ├── .gitignore               # Git ignore file
         └── package.json             # Project dependencies
 
-
 📧 Contact
 
      Author: Ashish Kumar Choudhary
-    
-    📩 Email: ashishchy862003@gmail.com
-    
-    🏗️ GitHub: GitHub Profile
-    
-    💼 LinkedIn: LinkedIn Profile
-    
-🎉 Enjoy shopping with ShopNest! 🛒🔥
 
+    📩 Email: ashishchy862003@gmail.com
+
+    🏗️ GitHub: GitHub Profile
+
+    💼 LinkedIn: LinkedIn Profile
+
+🎉 Enjoy shopping with ShopNest! 🛒🔥
