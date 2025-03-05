@@ -73,7 +73,7 @@ const Login = () => {
         navigate('/');
         await fetchUserDetails();
         await fetchUserAddToCartProductCount();
-      }, 2000);
+      }, 1000);
     } catch (error) {
       toast.error('Server error! Please try again later.');
     }
