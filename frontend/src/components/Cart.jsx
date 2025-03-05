@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -16,10 +14,12 @@ import {
 import { toast } from 'react-toastify';
 import RazorpayButton from './RazorpayButton';
 import Context from '../context';
+import SummaryApi from '../common';
 
 const Cart = () => {
   const {
     cartItems,
+    setCartItems,
     loading,
     error,
     handleQuantityChange,
@@ -32,32 +32,51 @@ const Cart = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const { fetchUserAddToCartProductCount } = useContext(Context);
 
-  // Clear cart when isSuccess is true
   useEffect(() => {
-    if (isSuccess) {
-      Promise.all(cartItems.map((item) => handleRemoveItem(item._id)))
-        .then(() => {
-          fetchUserAddToCartProductCount();
-          toast.success('Order placed successfully! Cart cleared.', {
-            position: 'top-center',
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-          });
-          setIsSuccess(false); // Reset isSuccess after clearing
-        })
-        .catch((error) => {
-          toast.error(
-            'Failed to clear cart: ' + (error.message || 'Something went wrong')
-          );
-          console.error('Error clearing cart:', error);
-        });
-    }
-  }, [isSuccess, cartItems, handleRemoveItem]);
+    if (!isSuccess) return;
 
-  // Mock delivery dates (replace with API data if available)
+    const clearCart = async () => {
+      try {
+        await Promise.all(
+          cartItems.map(async (item) => {
+            const response = await fetch(
+              `${SummaryApi.deleteAddToCartProduct.url}/${item._id}`,
+              {
+                method: SummaryApi.deleteAddToCartProduct.method,
+                credentials: 'include',
+              }
+            );
+
+            if (!response.ok) {
+              throw new Error(`Failed to delete item ${item._id}`);
+            }
+          })
+        );
+
+        await fetchUserAddToCartProductCount();
+
+        toast.success('Order placed successfully! Cart cleared.', {
+          position: 'top-center',
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        setCartItems([]);
+
+        setIsSuccess(false);
+      } catch (error) {
+        toast.error(
+          'Failed to clear cart: ' + (error.message || 'Something went wrong')
+        );
+        console.error('Error clearing cart:', error);
+      }
+    };
+
+    clearCart();
+  }, [isSuccess, cartItems, fetchUserAddToCartProductCount, setCartItems]);
+
   const getDeliveryDate = () => {
     const today = new Date();
     const tomorrow = new Date(today);

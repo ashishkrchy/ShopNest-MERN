@@ -119,6 +119,7 @@ export const useCartLogic = () => {
 
   return {
     cartItems,
+    setCartItems,
     loading,
     error,
     handleQuantityChange,
