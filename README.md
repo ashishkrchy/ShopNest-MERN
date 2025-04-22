@@ -1,9 +1,17 @@
-*********************************** ShopNest - E-Commerce Platform *******************************************
+******************************************** ShopNest - E-Commerce Platform *******************************************
 Welcome to ShopNest – a full-stack e-commerce platform designed for seamless online shopping experiences. Built
 with the MERN stack, ShopNest provides a robust, scalable solution for managing products, orders, and users,
 offering a modern and user-friendly interface.
 
 🌍 **Live App:** [ShopNest on Vercel](https://shop-nest-mern-ff35.vercel.app/)
+
+## Screenshots
+
+![image](https://github.com/user-attachments/assets/d63dbbde-40a6-496e-8bdc-f08a088fe862)
+![image](https://github.com/user-attachments/assets/5ee79824-2181-4a90-825a-a7eb7bf2cf46)
+![image](https://github.com/user-attachments/assets/ec7883a9-d59c-4c8d-97bd-5f3e337487dc)
+![image](https://github.com/user-attachments/assets/32bd4506-b971-4260-8df9-9030ee3d24aa)
+
 
 ## 🌟 Overview
 
